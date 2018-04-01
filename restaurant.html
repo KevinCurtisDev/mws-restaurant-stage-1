@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="/manifest.json">
+  <!-- Normalize.css for better cross-browser consistency -->
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <!-- Main CSS file -->
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <meta description="Udacity restaurant reviews mws">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#444">
+  <title>Restaurant Info</title>
+</head>
+
+<body>
+  <!-- Beginning header -->
+<div class="container">
+  <header class="header">
+    <!-- Beginning nav -->
+    <nav>
+      <h1><a href="/">Restaurant Reviews</a></h1>
+    </nav>
+    <!-- Beginning breadcrumb -->
+    <ul id="breadcrumb" >
+      <li><a href="/">Home</a></li>
+    </ul>
+    <!-- End breadcrumb -->
+    <a href="#restaurant-name"><button class="skip">Skip to main content</button></a>
+    <!-- End nav -->
+  </header>
+  <!-- End header -->
+
+  <!-- Beginning main -->
+  <main class="maincontent" role="main">
+    <!-- Beginning map -->
+    <section class="map-container-review" role="presentation" aria-hidden="true">
+      <div id="map"></div>
+    </section>
+    <!-- End map -->
+    <!-- Beginning restaurant -->
+      <div class="restaurant-container">
+        <section class="restaurant-info">
+          <a name="restaurant-name"><h1 id="restaurant-name"></h1></a>
+          <img id="restaurant-img">
+          <p id="restaurant-cuisine"></p>
+          <p id="restaurant-address"></p>
+          <table id="restaurant-hours" title="Opening times" tabindex="0">
+          </table>
+        </section>
+        <!-- end restaurant -->
+        <!-- Beginning reviews -->
+        <section class="reviews-container" id="reviews-container">
+          <ul id="reviews-list"></ul>
+        </section>
+        <!-- End reviews -->
+      </div>
+    <!-- End reviews -->
+  </main>
+  <!-- End main -->
+
+  <!-- Beginning footer -->
+  <footer id="footer">
+    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+  <!-- End footer -->
+</div>
+  <!-- Beginning scripts -->
+  <script type="text/javascript" src="js/restaurant_info.js"></script>
+  <!-- Database helpers -->
+  <script type="text/javascript" src="js/dbhelper.js"></script>
+  <!-- Google Maps -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcJ3eiAc8nifXgQezdS7BjCx1bCqA612k&libraries=places&callback=initMap"></script>
+  <!-- End scripts -->
+
+</body>
+
+</html>
